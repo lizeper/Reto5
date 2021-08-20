@@ -172,37 +172,10 @@ public class FrmRequerimientos extends javax.swing.JFrame {
     private void btnRequerimiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequerimiento2ActionPerformed
         // TODO add your handling code here:
         new FrmRequerimientosBusqueda().setVisible(true);
-        String[] columnNombre = {"Fec. Inicio", "Ciudad", "Constructora", "Nombre Lider",
-            "Codigo Tipo", "Estrato"};
-
-        ControllerRequerimientos controlador = new ControllerRequerimientos();
-
-        ArrayList<Requerimiento_2> lista;
-
-        try {
-            lista = controlador.consultaRequerimiento_2();
-
-            Object[][] datos = new Object[lista.size()][6];
-            int index = 0;
-
-            for (Requerimiento_2 r : lista) {
-                datos[index][0] = r.getFecIni();
-                datos[index][1] = r.getNombreCiudad();
-                datos[index][2] = r.getConstructora();
-                datos[index][3] = r.getNombreLider();
-                datos[index][4] = r.getCodigoTipo();
-                datos[index][5] = r.getEstrato();
-
-                index++;
-            }
-
-            DefaultTableModel model = new DefaultTableModel(datos, columnNombre);
-            miTabla.setModel(model);
-        } catch (SQLException e) {
-            System.err.println(e);
-        }
+         
     }//GEN-LAST:event_btnRequerimiento2ActionPerformed
-
+   
+      
     private void jbnRequerimiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRequerimiento3ActionPerformed
        
 
